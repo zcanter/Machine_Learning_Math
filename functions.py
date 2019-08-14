@@ -3,5 +3,5 @@
 
 import numpy as np
 
-# Function to determine if a matrix is singular (i.e. has an inverse)
+# Function to determine if a 4x4 matrix is singular (i.e. has an inverse)
 
