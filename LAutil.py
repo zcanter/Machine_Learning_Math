@@ -43,3 +43,4 @@ def pageRank(linkMatrix, d):
         r = M @ r
         i += 1
     print(str(i) + " iterations to convergence.")
+    return r
