@@ -1,5 +1,5 @@
 
-# Written by Zac Canter (many adapted from Coursera's Mathematics from Machine Learnine)
+# Written by Zac Canter (many adapted from Coursera's Mathematics from Machine Learning: Linear Algebra)
 
 import numpy as np
 import numpy.linalg as la
