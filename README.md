@@ -1,2 +1,3 @@
-# LinearAlgebra
-Collections of linear algebra functions
+# Linear Algebra
+
+A collections of linear algebra functions written by Zac Canter.
