@@ -1,3 +1,3 @@
-# Linear Algebra
+# ML-Math functions
 
-A collections of linear algebra functions written by Zac Canter.
+A collection of functions for machine learning math. Most were adapted from Coursera's [Mathmatics for Machine Learning specialization](https://www.coursera.org/specializations/mathematics-machine-learning?).
