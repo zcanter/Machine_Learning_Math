@@ -4,4 +4,4 @@ A collection of functions for machine learning math. Most were adapted from Cour
 
 [LAutil.py](LAutil.py) contains functions for linear algebra related to ML. It also contains PageRank implementation.
 
-[Multivar_Calc_Util.py](Multivar_Calc_Util.py) contains functions for multivar calc related to ML.
+[Simple-Neural-Net.py](Simple-Neural-Net.py) contains an implementation of a simple neural net.
