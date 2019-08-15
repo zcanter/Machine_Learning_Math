@@ -44,3 +44,22 @@ def pageRank(linkMatrix, d):
         i += 1
     print(str(i) + " iterations to convergence.")
     return r
+
+# Compute the angle using the inner product
+A = np.array([[2,-1], [-1,4]])
+x = [1,1]
+y = [0,2]
+
+def angle(A, x, y):
+    """Computes the angle in radians"""
+    x,y,A = map(np.array, [x,y,A])
+    norm_x = np.sqrt(x.T @ A @ x)
+    norm_y = np.sqrt(y.T @ A @ y)
+    sin = (x.T @ A @ y) / (norm_x * norm_y)
+    # inverse sin
+    return np.arccos(sin)
+
+a = angle(A,x,y)
+print(a)
+
+
