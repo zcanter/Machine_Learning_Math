@@ -62,4 +62,51 @@ def angle(A, x, y):
 a = angle(A,x,y)
 print(a)
 
+# Projections
 
+# Projection 1d
+
+def projection_matrix_1d(b):
+    """Compute the projection matrix onto the space spanned by `b`
+    Args:
+        b: ndarray of dimension (D, 1), the basis for the subspace
+    
+    Returns:
+        P: the projection matrix
+    """
+    P = np.dot(b,b.T)/np.linalg.norm(b)**2
+    return P
+
+def project_1d(x, b):
+    """Compute the projection matrix onto the space spanned by `b`
+    Args:
+        x: the vector to be projected
+        b: ndarray of dimension (D, 1), the basis for the subspace
+    
+    Returns:
+        y: ndarray of shape (D, 1) projection of x in space spanned by b
+    """
+    return projection_matrix_1d(b)@x
+
+# Projection onto a general (higher-dimensional) subspace
+def projection_matrix_general(B):
+    """Compute the projection matrix onto the space spanned by the columns of `B`
+    Args:
+        B: ndarray of dimension (D, M), the basis for the subspace
+    
+    Returns:
+        P: the projection matrix
+    """
+    P = B@np.linalg.inv(B.T@B)@B.T
+    return P
+
+def project_general(x, B):
+    """Compute the projection matrix onto the space spanned by the columns of `B`
+    Args:
+        x: ndarray of dimension (D, 1), the vector to be projected
+        B: ndarray of dimension (D, M), the basis for the subspace
+    
+    Returns:
+        p: projection of x onto the subspac spanned by the columns of B; size (D, 1)
+    """
+    return projection_matrix_general(B) @ x
